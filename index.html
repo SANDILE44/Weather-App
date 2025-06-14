@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🌦 Weather App</h1>
+
+  <!-- Search by city -->
+  <form id="weatherForm">
+    <input id="cityInput" type="text" placeholder="Enter city name" autocomplete="off" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Geolocation -->
+  <button id="useLoc">Use My Location</button>
+
+  <!-- Loading + error -->
+  <p id="loadingMsg" class="hidden" aria-live="polite">Loading weather…</p>
+  <p id="errorMsg"   class="hidden" aria-live="polite"></p>
+
+  <!-- Current weather -->
+  <div id="result" class="hidden">
+    <h2 id="cityName"></h2>
+    <img id="icon" alt="weather icon" />
+    <p id="temperature"></p>
+    <p id="description"></p>
+  </div>
+
+  <!-- 5‑day forecast -->
+  <div id="forecast" class="hidden">
+    <h3>5‑Day Forecast</h3>
+    <div id="forecastList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
